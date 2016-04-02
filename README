@@ -15,6 +15,14 @@ Licença: Livre para uso pessoal ou comercial sob os termos da LGPL
 
 ===========
 
+Segurança
+===========
+
+As aplicações gerada por esse framework já vem por padrão com segurançã aplicada, caso queira alterar as opções basta entrar no controller que deseja alterar, e remover a chamada do usuario do metodo init (todos) e colocar nos metodos que deja.
+
+
+===========
+
 Este é um repositório desvinculado ao repositório oficial.
 
 Todas as modificações são afim de facilitar o aprendizado quanto a geração dos CRUDs.
