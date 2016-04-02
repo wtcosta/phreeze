@@ -17,19 +17,32 @@ Exemplos de códigos e vídeos de treinamento estão disponíveis em http://phre
 
 Licença: Livre para uso pessoal ou comercial sob os termos da LGPL
 
-===========
 
 Segurança
 ===========
 
-As aplicações gerada por esse framework já vem por padrão com segurançã aplicada, caso queira alterar as opções basta entrar no 
-controller que deseja alterar, e remover a chamada do usuario do metodo init (todos) e colocar nos metodos que deja.
+As aplicações gerada por esse framework vem por padrão com níveis de segurançã aplicada, caso queira alterar as opções basta entrar no 
+controller que deseja alterar, e remover a chamada de permissões (RequirePermission) do metodo init (todos) e colocar nos metodos que 
+deja (Create / Update / Delete).
+*Não esquecer de adicionar ao bd as tabelas como explicado na tela de conexão do framework
+
+
+API
+===========
+
+Para acessa a API basta adicionar ao final da URL /api/*class que deseja acessar.
+Lemprar de desativar a segurança do metodo init conforme explicado anteriormente.
+Caso queira disponibilizar a api para acesso externo no formato JSON alterar o arquivo abaixo
+/libs/Controller/AppBaseController.php
+E adicionar o seguinte trecho após o require_once
+  
+  /** CORS */
+  header('Access-Control-Allow-Origin: *');
+  header("Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept");
 
 
 ===========
 
 Este é um repositório desvinculado ao repositório oficial.
-
 Todas as modificações são afim de facilitar o aprendizado quanto a geração dos CRUDs.
-
 Qualquer dúvidas, consultar a documentação oficial em http://phreeze.com/
